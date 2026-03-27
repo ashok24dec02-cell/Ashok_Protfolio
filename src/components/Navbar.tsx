@@ -1,10 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-<<<<<<< HEAD
 import { useSiteContent } from "@/hooks/useSiteContent";
-=======
->>>>>>> 71d546271321b4845ab6f2d7ac3f16a6aceacdf7
 
 const navLinks = [
   { href: "#home", label: "Home" },
@@ -18,10 +15,7 @@ const navLinks = [
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-<<<<<<< HEAD
   const { data: content } = useSiteContent();
-=======
->>>>>>> 71d546271321b4845ab6f2d7ac3f16a6aceacdf7
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
@@ -29,14 +23,10 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-<<<<<<< HEAD
   const fullName = content?.hero?.name || "Ashok Kumar";
   const nameParts = fullName.split(" ");
   const firstName = nameParts[0] || "Ashok";
   const restName = nameParts.length > 1 ? nameParts.slice(1).join(" ") : "Kumar.";
-
-=======
->>>>>>> 71d546271321b4845ab6f2d7ac3f16a6aceacdf7
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -46,11 +36,7 @@ const Navbar = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <a href="#home" className="font-display font-bold text-lg text-foreground">
-<<<<<<< HEAD
             {firstName} <span className="accent-text">{restName}</span>
-=======
-            Ashok <span className="accent-text">Kumar.</span>
->>>>>>> 71d546271321b4845ab6f2d7ac3f16a6aceacdf7
           </a>
 
           <div className="hidden md:flex items-center gap-6">

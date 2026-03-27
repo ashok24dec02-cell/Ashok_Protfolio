@@ -1,10 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Briefcase } from "lucide-react";
-<<<<<<< HEAD
 import { useSiteContent } from "@/hooks/useSiteContent";
-=======
->>>>>>> 71d546271321b4845ab6f2d7ac3f16a6aceacdf7
 
 const responsibilities = [
   "Built and deployed a dynamic LLM-powered chatbot using RAG for a company website with context-aware internal data retrieval.",
@@ -17,11 +14,8 @@ const responsibilities = [
 const Experience = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-<<<<<<< HEAD
   const { data: content } = useSiteContent();
   const experienceContent = content?.experience || {};
-=======
->>>>>>> 71d546271321b4845ab6f2d7ac3f16a6aceacdf7
 
   return (
     <section id="experience" ref={ref}>
@@ -48,7 +42,6 @@ const Experience = () => {
               <Briefcase className="w-6 h-6 text-primary" />
             </div>
             <div>
-<<<<<<< HEAD
               <h3 className="text-xl font-display font-bold text-foreground">
                 {experienceContent.role || "Software Developer Intern (AI/ML)"}
               </h3>
@@ -57,13 +50,8 @@ const Experience = () => {
               </p>
               <p className="text-muted-foreground text-sm mt-1">
                 {experienceContent.duration || "Oct 2025 – Present"}
-              </p>
-=======
-              <h3 className="text-xl font-display font-bold text-foreground">Software Developer Intern (AI/ML)</h3>
-              <p className="text-primary font-medium">Vienstereoptic Pvt. Ltd.</p>
-              <p className="text-muted-foreground text-sm mt-1">Oct 2025 – Present</p>
->>>>>>> 71d546271321b4845ab6f2d7ac3f16a6aceacdf7
-            </div>
+                </p>
+             </div>
           </div>
 
           <ul className="space-y-4">
